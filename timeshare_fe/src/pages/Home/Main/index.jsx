@@ -81,7 +81,7 @@ const Main = ({ filteredData, currentPage, pageSize, userInformation }) => {
                             cursor: "not-allowed",
                           }}
                         >
-                          You already booked this time share
+                          You already booked this timeshare
                         </button>
                       </div>
                     ) : (
