@@ -142,7 +142,7 @@ function AgreementPage() {
           reasons listed in the policy/Description of Coverage. Terms and
           conditions apply. Plan is underwritten by GENERALI US Branch, A Stock
           Company. For coverage inquiries or customer service call (866)
-          999-4018.
+          999-4018.12345
         </p>
         {/* Add more content for Travel Insurance */}
 
