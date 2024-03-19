@@ -42,11 +42,13 @@ const Register = () => {
       errors["password"] = "Please enter password";
     }
 
-    if (!data.email) {
+    if (!data.email || !data.email.includes('@')) {
       formIsValid = false;
-      errors["email"] = "Please enter email";
+      errors["email"] = "Please enter a valid email address";
+    } else {
+      errors["email"] = "";
     }
-
+    
     if (!data.name) {
       formIsValid = false;
       errors["name"] = "Please enter name";
