@@ -1,3 +1,4 @@
+
 import { useContext, useEffect, useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -14,6 +15,7 @@ const Login = () => {
     password: "",
     email: "",
   });
+  const [errors, setErrors] = useState({});
   const loginContext = useContext(GlobalContext);
   const { setIsLogin, setUserInformation, isLogin } = loginContext;
 
@@ -34,17 +36,6 @@ const Login = () => {
           requestLoginFunction.data.message != "Invalid Credential"
         ) {
           const userDecode = jwtDecode(requestLoginFunction.data.message);
-          const getUserDetail = await axios.get(
-            `/User/GetUserById/${userDecode["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"]}`
-          );
-          if (getUserDetail.status === 200) {
-            if (!getUserDetail.data.result.isActive) {
-              alert(
-                "This account is not banned. Please contact your administrator"
-              );
-              return;
-            }
-          }
           setUserInformation(userDecode);
           setIsLogin(true);
           alert("Login successful");
@@ -61,12 +52,24 @@ const Login = () => {
       alert("Login Failed");
     },
   });
+
   const handleLoginFunction = async (e) => {
     e.preventDefault();
     try {
-      // check email and password
-      if (data.username && !data.password) {
-        alert("Please enter a password");
+      // Kiểm tra xem đã nhập username hoặc email và password chưa
+      if (!data.username && !data.email) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          username: "Please enter username or email",
+        }));
+        return;
+      }
+      // Kiểm tra xem đã nhập password chưa
+      if (!data.password) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          password: "Please enter password",
+        }));
         return;
       }
 
@@ -77,23 +80,12 @@ const Login = () => {
         requestLoginFunction.data.message !== "Invalid Credential"
       ) {
         const userDecode = jwtDecode(requestLoginFunction.data.message);
-        const getUserDetail = await axios.get(
-          `/User/GetUserById/${userDecode["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"]}`
-        );
-        if (getUserDetail.status === 200) {
-          if (!getUserDetail.data.result.isActive) {
-            alert(
-              "This account is not banned. Please contact your administrator"
-            );
-            return;
-          }
-        }
         setUserInformation(userDecode);
         setIsLogin(true);
         alert("Login successful");
         const userRole =
           userDecode[
-            "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"
+          "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"
           ];
         if (userRole === "ADMIN") {
           navigation("/admin");
@@ -104,10 +96,9 @@ const Login = () => {
           return;
         }
         navigation("/");
+      } else {
+        alert("Login failed");
       }
-      // else {
-      //   alert("Login failed");
-      // }
     } catch (err) {
       console.error(err);
       alert("Login failed");
@@ -119,6 +110,7 @@ const Login = () => {
       navigation("/");
     }
   }, [isLogin]);
+
   return (
     <div className={"loginForm"}>
       <div className="flexForm">
@@ -143,8 +135,13 @@ const Login = () => {
             <input
               onChange={(e) => {
                 setData({ ...data, username: e.target.value });
+                setErrors((prevErrors) => ({
+                  ...prevErrors,
+                  username: "",
+                }));
               }}
             />
+            {errors.username && <span className="error">{errors.username}</span>}
           </div>
           <div className="textField">
             <label>Password</label>
@@ -152,8 +149,13 @@ const Login = () => {
               type="password"
               onChange={(e) => {
                 setData({ ...data, password: e.target.value });
+                setErrors((prevErrors) => ({
+                  ...prevErrors,
+                  password: "",
+                }));
               }}
             />
+            {errors.password && <span className="error">{errors.password}</span>}
           </div>
           <div className="flexAction">
             <div className="checkboxField">
