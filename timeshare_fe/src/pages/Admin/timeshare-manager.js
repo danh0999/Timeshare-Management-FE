@@ -5,7 +5,7 @@ import { AudioOutlined } from "@ant-design/icons";
 import { Input, Space } from "antd";
 import Pagination from "../../Components/Painganation";
 const { Search } = Input;
-
+//api timeshare manage
 function TimeShareManagerPage() {
   const [data, setData] = useState([]);
   const [reload, setReload] = useState(false);
