@@ -7,7 +7,7 @@ import { IoLogoGoogle, IoLogoFacebook } from "react-icons/io";
 import axios from "axios";
 import { GlobalContext } from "../../provide";
 import { jwtDecode } from "jwt-decode";
-//validate
+//validate login
 const Login = () => {
   const navigation = useNavigate();
   const [data, setData] = useState({
