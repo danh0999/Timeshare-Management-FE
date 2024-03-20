@@ -296,6 +296,12 @@ function TimeShareDetailPage() {
                 ? " ACCEPT PAYMENT"
                 : "BOOKING"}
             </button>
+            {!termsAccepted && (
+              <p style={{ color: "red", marginTop: "10px" }}>
+                Please accept the terms before booking.
+              </p>
+            )}
+
             <hr />
             <div className="poster-info">
               <div className="poster-avatar">KC</div>
