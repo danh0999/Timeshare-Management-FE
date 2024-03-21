@@ -43,9 +43,6 @@ function AgreementPage() {
           event will delay payment to the Owner, pending resolution by
           timeshare, the sole arbiter.
         </p>
-        {/* Add more content for Renter Obligations */}
-
-        {/* Content for Renter Obligations */}
 
         <h3 className="subsection-title">Rental Payment Terms</h3>
         <p className="paragraph">
@@ -66,9 +63,6 @@ function AgreementPage() {
           and timeshare are relieved of all further obligations under this
           Agreement.
         </p>
-        {/* Add more content for Rental Payment Terms */}
-
-        {/* Content for Rental Payment Terms */}
 
         <h3 className="subsection-title">Cancellations</h3>
         <p className="paragraph">
@@ -79,9 +73,6 @@ function AgreementPage() {
           100% of the total rental amount will be paid to the Owner, less
           agreed-upon fees.
         </p>
-        {/* Add more content for Cancellations */}
-
-        {/* Content for Cancellations */}
 
         <h3 className="subsection-title">Force Majeure</h3>
         <p className="paragraph">
@@ -142,7 +133,6 @@ function AgreementPage() {
           reasons listed in the policy/Description of Coverage. Terms and
           conditions apply. Plan is underwritten by GENERALI US Branch, A Stock
           Company. For coverage inquiries or customer service call (866)
-          999-4018.12345
         </p>
         {/* Add more content for Travel Insurance */}
 
