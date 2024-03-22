@@ -25,6 +25,19 @@ function PostTimeSharePage() {
   });
   const [errors, setErrors] = useState({});
   const [places, setPlaces] = useState([]);
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      // Update state with the uploaded image URL
+      setData({ ...data, image: reader.result });
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
 
   const handleCreateTimeShare = async (e) => {
     e.preventDefault();
@@ -194,9 +207,12 @@ function PostTimeSharePage() {
         <span className="divider"></span>
         <div className="loginsForm">
           <h3>Add Image Time Share</h3>
-          <Link to={"/login"}>
-            <button className="registerButton">Add here</button>
-          </Link>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => handleImageUpload(e)}
+            className="registerButton"
+          />
         </div>
       </div>
     </>
