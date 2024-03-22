@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../provide";
+import axios from 'axios';
 
 const Register = () => {
   const navigation = useNavigate();
@@ -20,11 +21,22 @@ const Register = () => {
     e.preventDefault();
     try {
       if (validateForm()) {
-        alert("Register Success");
-        navigation("/");
+        // Gửi dữ liệu đăng ký tới endpoint
+        const response = await axios.post('/Auth/register', data);
+        
+        // Kiểm tra phản hồi từ máy chủ
+        if (response.status === 200) {
+          // Đăng ký thành công
+          alert("Register Success");
+          navigation("/");
+        } else {
+          // Đăng ký không thành công, xử lý tùy theo phản hồi từ máy chủ
+          console.error("Registration failed:", response.data.message);
+        }
       }
     } catch (err) {
-      console.error(err);
+      // Xử lý lỗi nếu có
+      console.error("Error during registration:", err);
     }
   };
 
@@ -32,31 +44,34 @@ const Register = () => {
     let errors = {};
     let formIsValid = true;
 
+    // Kiểm tra username
     if (!data.username) {
       formIsValid = false;
       errors["username"] = "Please enter username";
     }
 
-    if (!data.password) {
+    // Kiểm tra password
+    if (!data.password || data.password.length < 8) {
       formIsValid = false;
-      errors["password"] = "Please enter password";
+      errors["password"] = "Password must be at least 8 characters long";
     }
 
+    // Kiểm tra email
     if (!data.email || !data.email.includes('@')) {
       formIsValid = false;
       errors["email"] = "Please enter a valid email address";
-    } else {
-      errors["email"] = "";
     }
-    
+
+    // Kiểm tra tên
     if (!data.name) {
       formIsValid = false;
       errors["name"] = "Please enter name";
     }
 
-    if (!data.phoneNumber) {
+    // Kiểm tra số điện thoại
+    if (!data.phoneNumber || !data.phoneNumber.startsWith('+84')) {
       formIsValid = false;
-      errors["phoneNumber"] = "Please enter phone";
+      errors["phoneNumber"] = "Please enter a valid phone number starting with +84";
     }
 
     setErrors(errors);
@@ -116,10 +131,8 @@ const Register = () => {
             <label>Phone Number</label>
             <input
               type="text"
-              pattern="[0-9]*"
               onChange={(e) => {
-                const value = e.target.value.replace(/\D/g, "");
-                setData({ ...data, phoneNumber: value });
+                setData({ ...data, phoneNumber: e.target.value });
               }}
             />
             <span className="error">{errors["phoneNumber"]}</span>
