@@ -56,7 +56,7 @@ const Login = () => {
   const handleLoginFunction = async (e) => {
     e.preventDefault();
     try {
-      // Kiểm tra xem đã nhập username hoặc email và password chưa
+      // check input username , email 
       if (!data.username && !data.email) {
         setErrors((prevErrors) => ({
           ...prevErrors,
@@ -64,7 +64,7 @@ const Login = () => {
         }));
         return;
       }
-      // Kiểm tra xem đã nhập password chưa
+      // check password
       if (!data.password) {
         setErrors((prevErrors) => ({
           ...prevErrors,
@@ -164,7 +164,7 @@ const Login = () => {
                 Keep me signed in
               </label>
             </div>
-            <Link to={"/forgot-password"}>Forgot Password?</Link>
+            <Link to={"/forgot-password"}>Forgot Password?</Link> 
           </div>
           <button onClick={(e) => handleLoginFunction(e)}>SIGN IN</button>
         </form>
@@ -181,3 +181,4 @@ const Login = () => {
 };
 
 export default Login;
+//not finished forgot password
