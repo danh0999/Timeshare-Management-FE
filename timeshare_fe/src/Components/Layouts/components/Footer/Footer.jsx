@@ -14,6 +14,24 @@ const Footer = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
+  const redirectToTwitter = () => {
+    window.open("https://twitter.com/", "_blank");
+  };
+
+  // Function to handle redirection to Facebook
+  const redirectToFacebook = () => {
+    window.open("https://www.facebook.com/", "_blank");
+  };
+
+  // Function to handle redirection to Instagram
+  const redirectToInstagram = () => {
+    window.open("https://www.instagram.com/", "_blank");
+  };
+
+  // Function to handle redirection to Zalo
+  const redirectToZalo = () => {
+    window.open("https://chat.zalo.me/", "_blank");
+  };
 
   return (
     <section className="footer">
@@ -28,10 +46,10 @@ const Footer = () => {
               </a>
             </div>
             <div data-aos="fade-up" className="footerSocials flex">
-              <AiOutlineTwitter className="icon" />
-              <FaFacebookSquare className="icon" />
-              <FaInstagramSquare className="icon" />
-              <SiZalo className="icon" />
+              <AiOutlineTwitter className="icon" onClick={redirectToTwitter}/>
+              <FaFacebookSquare className="icon" onClick={redirectToFacebook} />
+              <FaInstagramSquare className="icon" onClick={redirectToInstagram} />
+              <SiZalo className="icon" onClick={redirectToZalo} />
             </div>
           </div>
 
@@ -42,6 +60,10 @@ const Footer = () => {
               className="linkGroup"
             >
               <span className="groupTitle">RESOURCES</span>
+              <li className="footerList flex">
+                {/* <FiChevronRight className="icon" /> */}
+                Contact
+              </li>
               <li className="footerList flex">
                 {/* <FiChevronRight className="icon" /> */}
                 Owner Resources
