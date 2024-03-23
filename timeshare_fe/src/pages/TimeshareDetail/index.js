@@ -215,7 +215,7 @@ function TimeShareDetailPage() {
                 href="/posting/R1171762/resort-info"
                 data-select-tab="resortInfo"
               >
-                About the TimeShare
+                About the detail TimeShare
               </a>
             </dd>
           </dl>
