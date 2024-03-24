@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../../provide";
-
+import "./PostTimeshare.css";
 function PostTimeSharePage() {
   const navigation = useNavigate();
 
@@ -51,12 +51,12 @@ function PostTimeSharePage() {
           createTimeshare.status === 200 &&
           createTimeshare.data.isSucceed &&
           createTimeshare.data.message ===
-            "Create Timeshare successfully. Awaiting confirmation."
+            "Post Timeshare successfully. Awaiting confirmation."
         ) {
           alert(createTimeshare.data.message);
           navigation("/");
         } else {
-          console.log("Can't create Timeshare");
+          console.log("Can't Post Timeshare");
         }
       }
     } catch (err) {
@@ -122,11 +122,11 @@ function PostTimeSharePage() {
     <>
       <div className={"registersform"}>
         <div className="flexsForm">
-          <h1>Create Time Share</h1>
+          <h1>Post TimeShare</h1>
           <div className="dividerSocial"></div>
           <form>
             <div className="textField">
-              <label>Time Share Name</label>
+              <label>TimeShare Name</label>
               <input
                 onChange={(e) => {
                   setData({ ...data, timeshareName: e.target.value });
@@ -201,7 +201,7 @@ function PostTimeSharePage() {
               />
               <span className="error">{errors["detail"]}</span>
             </div>
-            <button onClick={(e) => handleCreateTimeShare(e)}>Create</button>
+            <button onClick={(e) => handleCreateTimeShare(e)}>POST</button>
           </form>
         </div>
         <span className="divider"></span>
