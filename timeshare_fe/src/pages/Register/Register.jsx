@@ -69,9 +69,9 @@ const Register = () => {
     }
 
     // Kiểm tra số điện thoại
-    if (!data.phoneNumber || !data.phoneNumber.startsWith('+84')) {
+    if (!data.phoneNumber || !data.phoneNumber.startsWith('0') || data.phoneNumber.length !== 10 || isNaN(data.phoneNumber)) {
       formIsValid = false;
-      errors["phoneNumber"] = "Please enter a valid phone number starting with +84";
+      errors["phoneNumber"] = "Please enter a valid phone number starting with 0 and containing 10 digits";
     }
 
     setErrors(errors);
