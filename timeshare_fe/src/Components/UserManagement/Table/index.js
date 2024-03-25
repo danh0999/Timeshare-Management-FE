@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Select, Space, Table, Tag, Button } from "antd";
 import { Modal, Form, Input } from "antd";
 import axios from "axios";
-
+// api manager user
 const ModalEdit = ({ isModalOpen, setIsModalOpen, data, setReload }) => {
   const [userData, setUserData] = useState({
     name: "",
