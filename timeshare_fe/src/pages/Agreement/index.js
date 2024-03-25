@@ -9,136 +9,77 @@ function AgreementPage() {
       <div className="agreement-section">
         <h2 className="section-title">Resort Policies</h2>
         <ul className="policy-list">
-          <li>No pets</li>
-          <li>No smoking</li>
-          <li>Minimum check-in age: 18</li>
+          <li>No pets allowed on premises.</li>
+          <li>No smoking allowed in the unit or common areas.</li>
+          <li>Minimum check-in age: 18 years old.</li>
         </ul>
       </div>
 
       <div className="agreement-section">
         <h2 className="section-title">Terms and Conditions</h2>
         <p className="paragraph">
-          This Rental Agreement ("Agreement") is between the above identified
-          Owner and the Renter for the rental of the unit described above
-          ("Unit") for the term described above ("Rental Period"). The Owner has
-          contracted with timeshare, Inc. (“timeshare”), which serves as the
-          processor and facilitator of the transaction between the two parties.
-          While timeshare has verified the Unit information listed above with
-          the resort, and provides assistance with the transaction, the Owner is
-          ultimately responsible for the accuracy of the posting, changing the
-          guest name with the resort, and ensuring the resort provides the
-          correct unit type.
+          This Rental Agreement ("Agreement") is a legally binding contract
+          between the Owner and the Renter for the rental of the described unit
+          ("Unit") for the specified term ("Rental Period"). The Owner has
+          partnered with timeshare, Inc. ("timeshare") to facilitate this
+          transaction. While timeshare assists with the transaction and verifies
+          the Unit information, the Owner remains responsible for accuracy and
+          coordination with the resort.
         </p>
         <p className="paragraph">
-          This Agreement will become effective upon the completion of the Review
-          Period as described in section 3.1.
+          This Agreement takes effect after the Review Period described in
+          section 3.1.
         </p>
         <h3 className="subsection-title">Renter Obligations</h3>
         <p className="paragraph">
-          2.1. Renter may use the Unit during the term without interference
-          subject to the terms of this Agreement. If the Unit is uninhabitable
-          or inaccessible per section 5 on the day that the term starts, Renter
-          shall notify timeshare immediately using the dispute process described
-          in section 6. Any dispute regarding the unit or anticipated evacuation
-          event will delay payment to the Owner, pending resolution by
-          timeshare, the sole arbiter.
+          2.1. Renter agrees to use the Unit during the term without
+          interference, following the terms of this Agreement. In the event that
+          the Unit is uninhabitable or inaccessible as per section 5 on the
+          start date, Renter must notify timeshare immediately using the dispute
+          process outlined in section 6. Any dispute regarding the Unit or
+          potential evacuation delays payment to the Owner until resolved by
+          timeshare.
         </p>
 
         <h3 className="subsection-title">Rental Payment Terms</h3>
         <p className="paragraph">
-          3.1. Upon being notified of Renter's full Rental Payment due under
-          this Agreement, timeshare will begin a review of the transaction
-          (hereinafter "Review Period"). timeshare may, in its sole discretion,
-          require additional documentation, proof of identity, a change to the
-          Renter's payment method, or other such information deemed necessary to
-          confirm the rental and protect all parties. Owner agrees to change the
-          name on the reservation and forward a new confirmation. Both Renter
-          and Owner agree to make a best-faith effort to comply with any such
-          requests in a timely fashion. Upon completion of the Review Period,
-          timeshare will issue an email confirmation ("Confirmation") to both
-          Owner and Renter, at which point this Agreement in its entirety
-          becomes effective (but is not in effect until such Confirmation is
-          issued). If timeshare does not issue a Confirmation, timeshare will
-          refund the Rent Payment to the Renter, at which time Renter, Owner,
-          and timeshare are relieved of all further obligations under this
-          Agreement.
+          3.1. Upon receiving Renter's full Rental Payment, timeshare begins a
+          review ("Review Period"). timeshare may request additional
+          documentation or information to confirm the rental. Upon completing
+          the Review Period, timeshare issues a Confirmation email to both Owner
+          and Renter, activating this Agreement. If no Confirmation is issued,
+          timeshare refunds the Rent Payment, releasing all parties from
+          obligations.
         </p>
 
         <h3 className="subsection-title">Cancellations</h3>
         <p className="paragraph">
-          Renter and Owner agree to the following Cancellation Policy once
-          timeshare issues the Confirmation: If Renter cancels at least 60 days
-          prior to check-in, 100% of the total rental amount will be refunded to
-          the Renter. For cancellations less than 60 days prior to check-in,
-          100% of the total rental amount will be paid to the Owner, less
-          agreed-upon fees.
+          Renter and Owner agree to this Cancellation Policy: If Renter cancels
+          at least 60 days before check-in, 100% rental amount is refunded. For
+          cancellations within 60 days, 100% rental amount is paid to the Owner,
+          minus agreed fees.
         </p>
 
         <h3 className="subsection-title">Force Majeure</h3>
         <p className="paragraph">
-          If the Unit is uninhabitable or inaccessible on the day the Rental
-          Period commences by reason of flood, fire, storm, force majeure, or
-          other natural disaster, and a satisfactory substitute is not made
-          available, the total Rent Payment will be refunded to the Renter. If
-          the Renter is required to evacuate the Unit at any point during the
-          Rental Term, the Renter is entitled to a pro-rated refund for unused
-          nights from the point of evacuation order through the remainder of the
-          Rental Period. In such events, the Owner will have no further
-          liability to the Renter. Renter's inability to complete their travel
-          for any other reason beyond the Owner's control (including, but not
-          limited to, illness, airline interruptions, job loss, government
-          mandate or restrictions) are the sole responsibility of the Renter,
-          and the Cancellation Policy in section 4 applies. Renter is encouraged
-          to purchase trip interruption and cancellation insurance for such
-          matters.
+          If the Unit becomes uninhabitable due to natural disasters, Renter
+          receives a full refund. In case of evacuation during the Rental Term,
+          Renter receives a pro-rated refund. Renter's inability to travel for
+          other reasons doesn't alter the Cancellation Policy. Renter is advised
+          to consider purchasing trip insurance for unforeseen circumstances.
         </p>
-        {/* Add more content for Force Majeure */}
-
-        {/* Content for Force Majeure */}
 
         <h3 className="subsection-title">Disputes</h3>
         <p className="paragraph">
-          6.1. If the Renter does not receive the Unit as described in the Unit
-          Details section, they should open a dispute directly with timeshare at
-          https://www.timeshare.com/dispute by 12 pm (noon) PT on Nov 19, 2024.
+          6.1. If Renter receives a Unit not as described, they should dispute
+          directly with timeshare by Nov 19, 2024, noon PT.
         </p>
         <p className="paragraph">
-          6.2. If there is a material discrepancy between the Unit received and
-          the Unit Details described in this Agreement, timeshare will attempt
-          to resolve the issue. However, the information provided on Renter's
-          Reservation Confirmation is based on information obtained from the
-          resort/hotel or other reliable resources. timeshare makes reasonable
-          efforts to ensure that information provided by timeshare is accurate
-          and complete as of the date such information is published; however,
-          timeshare expressly disclaims liability for inaccurate, incomplete or
-          misleading resort information. Renters and their guests should reach
-          out to the Resort directly to verify accuracy of information as
-          needed. timeshare reserves all rights to modify these Terms and
-          Conditions at any time in its sole discretion.
+          6.2. timeshare aims to resolve disputes about Unit discrepancies.
+          However, timeshare is not liable for inaccurate resort information.
+          Renter should verify information with the Resort. timeshare reserves
+          the right to modify Terms and Conditions.
         </p>
-        {/* Add more content for Disputes */}
-
-        {/* Content for Disputes */}
-
-        <h3 className="subsection-title">Travel Insurance</h3>
-        <p className="paragraph">
-          If Renter purchased the optional travel insurance, the policy or
-          description of coverage for the trip can be found here:
-          https://www.csatravelprotection.com/certpolicy.do?product=g-330csa.
-          The travel protection, if purchased, provides coverage for unused,
-          nonrefundable payments if the trip must be canceled due to a covered
-          reason. Covered reasons include: mandatory hurricane evacuations;
-          sickness, injury or death; extension of school year; armed service
-          revocation; involuntary termination of employment or other specific
-          reasons listed in the policy/Description of Coverage. Terms and
-          conditions apply. Plan is underwritten by GENERALI US Branch, A Stock
-          Company. For coverage inquiries or customer service call (866)
-        </p>
-        {/* Add more content for Travel Insurance */}
-
-        {/* Content for Travel Insurance */}
-
-        {/* Add more sections as needed */}
       </div>
     </div>
   );
