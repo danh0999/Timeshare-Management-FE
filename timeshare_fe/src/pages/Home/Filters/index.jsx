@@ -36,25 +36,26 @@ const Filters = ({ filters, setFilters, handleFilterChange }) => {
               <img
                 width="179"
                 height="157"
-                src="https://cdn5.redweek.com/img/heroes/home/testimonial-kym_3.jpg?iHvN8LAoj49dvIOXfakPbg"
+                src="https://sankid.vn/wp-content/uploads/2020/06/11-8.jpg"
                 className="lazy"
                 alt=""
               />{" "}
             </div>
             <blockquote className="hero-image_quote-text">
-              Welcome to our Timeshare Vacation ! Discover a world of luxury and
-              relaxation with our premium timeshare offerings. Whether you're
-              seeking a beachfront paradise, a mountain retreat, or a vibrant
-              city escape, we have the perfect vacation property for you. Our
-              mission is to provide you with unforgettable holiday experiences.
-              Explore our diverse range of timeshare options, exceptional
-              services, and dedicated customer support. Rent timeshares with us
-              and make every vacation a memorable adventure.
+              Explore our exclusive Timeshare Vacation experience! Immerse
+              yourself in a realm of opulence and tranquility with our top-tier
+              timeshare selections. Whether you crave a seaside haven, a serene
+              mountain hideaway, or an exhilarating urban getaway, we offer the
+              ideal vacation retreat for you. Our goal is to curate
+              unforgettable holiday memories for you. Delve into our wide array
+              of timeshare choices, outstanding amenities, and unwavering
+              customer service. Rent a timeshare with us and transform each
+              vacation into an unforgettable journey.
             </blockquote>
             <div className="hero-image_quote-author-container">
-              <cite className="hero-image_quote-author">Kym &amp; Chris </cite>
+              <cite className="hero-image_quote-author">Phong &amp; Tien </cite>
               <time className="hero-image_quote-date" dateTime="2015">
-                Members since 2015
+                VIP Members since 2019
               </time>
             </div>
           </div>
