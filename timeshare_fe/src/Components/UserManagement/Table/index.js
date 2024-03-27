@@ -37,6 +37,25 @@ const ModalEdit = ({ isModalOpen, setIsModalOpen, data, setReload }) => {
   }, [data]);
 
   const handleUpdateUserData = async () => {
+    // Kiểm tra thông tin cần thiết
+    if (
+      !userData.userName ||
+      !userData.name ||
+      !userData.email ||
+      !userData.phoneNumber ||
+      !userData.password
+    ) {
+      alert("Please fill in all required fields");
+      return;
+    }
+
+    // Kiểm tra số điện thoại hợp lệ
+    const phoneRegex = /^0\d{9}$/;
+    if (!phoneRegex.test(userData.phoneNumber)) {
+      alert("Phone number is invalid");
+      return;
+    }
+
     try {
       const endpoint = data
         ? `/User/UpdateUser/${data.id}`
