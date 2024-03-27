@@ -9,6 +9,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import Aos from "aos";
 import { FaEarthAsia } from "react-icons/fa6";
 import "aos/dist/aos.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   useEffect(() => {
@@ -38,17 +39,23 @@ const Footer = () => {
       <div className="secContent container">
         <div className="footerCard flex">
           <div className="footerIntro flex">
-            <div className="logoDiv">
-              <a href="*" className="logo flex">
-                <h1>
-                  <MdApartment className="icon" /> Timeshare
-                </h1>
-              </a>
+            <div class="logoDiv">
+              <Link to="/" class="navbarLogo flex">
+                <img
+                  src="https://scontent.xx.fbcdn.net/v/t1.15752-9/432813694_1585955775525907_3594031435206372588_n.png?stp=cp0_dst-png&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=fuD2b3Oxu38AX_TB8dJ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRSWt2nyll1Ky3fH-SzDWXZwFpF26K_8zDrV1JHDgMy8Q&oe=662B8F4E"
+                  alt=""
+                  class="logo"
+                />
+                <h1>Timeshare</h1>
+              </Link>
             </div>
             <div data-aos="fade-up" className="footerSocials flex">
-              <AiOutlineTwitter className="icon" onClick={redirectToTwitter}/>
+              <AiOutlineTwitter className="icon" onClick={redirectToTwitter} />
               <FaFacebookSquare className="icon" onClick={redirectToFacebook} />
-              <FaInstagramSquare className="icon" onClick={redirectToInstagram} />
+              <FaInstagramSquare
+                className="icon"
+                onClick={redirectToInstagram}
+              />
               <SiZalo className="icon" onClick={redirectToZalo} />
             </div>
           </div>
