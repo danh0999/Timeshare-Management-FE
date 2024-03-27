@@ -86,12 +86,14 @@ const Navbar = () => {
   return (
     <section className="navBarSection">
       <header className="navbarHeader flex">
-        <div className="logoDiv">
-          <Link to="/" className="navbarLogo flex">
-            <h1>
-              <MdApartment className="icon" />
-              Timeshare
-            </h1>
+        <div class="logoDiv">
+          <Link to="/" class="navbarLogo flex">
+            <img
+              src="https://scontent.xx.fbcdn.net/v/t1.15752-9/432813694_1585955775525907_3594031435206372588_n.png?stp=cp0_dst-png&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=fuD2b3Oxu38AX_TB8dJ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRSWt2nyll1Ky3fH-SzDWXZwFpF26K_8zDrV1JHDgMy8Q&oe=662B8F4E"
+              alt=""
+              class="logo"
+            />
+            <h1>Timeshare</h1>
           </Link>
         </div>
 
@@ -142,7 +144,7 @@ const Navbar = () => {
                   src={Avatar}
                 />
                 &nbsp;
-                <p style={{ color: "#972417" }}> {userInformation?.Name}</p>
+                <p style={{ color: "#000000" }}> {userInformation?.Name}</p>
               </li>
             )}
           </ul>
