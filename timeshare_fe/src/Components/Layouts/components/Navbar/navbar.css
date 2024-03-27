@@ -47,7 +47,7 @@ header.navbarHeader.flex ul li {
 
 header.navbarHeader.flex ul li a {
   text-decoration: none;
-  color: #222;
+  color: #000000;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -57,7 +57,7 @@ header.navbarHeader.flex ul li a:hover {
 }
 
 #root > section.navBarSection > header > div.navBar > ul > button > a {
-  color: #0091b3;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -69,11 +69,28 @@ header.navbarHeader.flex ul li a:hover {
 /* logo */
 a.navbarLogo.flex {
   text-decoration: none;
-  color: #972417;
+  color: #000000;
   font-size: 20px;
 }
 
 a.navbarLogo.flex h1 {
   display: flex;
   align-items: center;
+}
+/* CSS */
+.logoDiv {
+  display: flex;
+  align-items: center;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 40px; /* Điều chỉnh kích thước của hình ảnh logo tùy ý */
+  height: 40px; /* Điều chỉnh kích thước của hình ảnh logo tùy ý */
+  margin-right: 10px; /* Điều chỉnh khoảng cách giữa hình ảnh logo và chữ */
 }
