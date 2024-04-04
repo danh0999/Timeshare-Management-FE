@@ -1,14 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./main.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { IoLocationOutline } from "react-icons/io5";
+import { CiCalendarDate } from "react-icons/ci";
 import { IoHeart } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { formatDate, formatDateDDYYMM } from "../../../Components/helpers";
 
 const Main = ({ filteredData, currentPage, pageSize, userInformation }) => {
   const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+  const [searchDate, setSearchDate] = useState("");
+  const [searchPrice, setSearchPrice] = useState("");
+
+  const handleInputChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const searchFilterFunction = (data) => {
+    return data.filter((item) => {
+      const lowercasedItem = item.timeshareName.toLowerCase();
+      const searchDateObj = new Date(searchDate).setHours(0, 0, 0, 0);
+      const itemDateObj = new Date(item.publicDate).setHours(0, 0, 0, 0);
+
+      return (
+        lowercasedItem.includes(search.toLowerCase()) &&
+        (!searchDate || itemDateObj === searchDateObj) &&
+        (!searchPrice || item.price <= searchPrice)
+      );
+    });
+  };
+
+  const filteredItems = searchFilterFunction(filteredData);
+
   return (
     <section className="main container section">
       <div className="secTitle">
@@ -18,7 +41,7 @@ const Main = ({ filteredData, currentPage, pageSize, userInformation }) => {
       </div>
 
       <div className="secContent grid">
-        {filteredData
+        {filteredItems
           .slice((currentPage - 1) * pageSize, currentPage * pageSize)
           .map(
             ({
@@ -26,10 +49,12 @@ const Main = ({ filteredData, currentPage, pageSize, userInformation }) => {
               image,
               timeshareName,
               address,
-              grade = 100,
+              grade,
               price,
               detail,
               userBooked,
+              dateFrom,
+              dateTo,
             }) => {
               return (
                 <div
@@ -37,7 +62,7 @@ const Main = ({ filteredData, currentPage, pageSize, userInformation }) => {
                   data-aos="fade-up"
                   className="singleDestination"
                 >
-                  <div className="new-ribbon secondary">${price}</div>
+                  <div className="new-ribbon secondary">${price} / day</div>
                   <div className="imageDiv">
                     <img
                       src={
@@ -57,6 +82,20 @@ const Main = ({ filteredData, currentPage, pageSize, userInformation }) => {
                           <IoLocationOutline className="icon" />
                           <span className="name">{address}</span>
                         </span>
+                        <span
+                          className="continent flex"
+                          style={{ marginTop: "3px" }}
+                        >
+                          <CiCalendarDate
+                            className="icon"
+                            style={{ fontSize: "20px", marginRight: "3px" }}
+                          />
+                          <span className="name">
+                            {formatDateDDYYMM(dateFrom) +
+                              " - " +
+                              formatDateDDYYMM(dateTo)}
+                          </span>
+                        </span>
                       </div>
                       <div className="grade">
                         <span style={{ fontSize: "0.85rem" }}>
@@ -73,28 +112,24 @@ const Main = ({ filteredData, currentPage, pageSize, userInformation }) => {
                     </div>
 
                     {userBooked ? (
-                      <div className="fees flex">
-                        <button
-                          className="btn flex"
-                          style={{
-                            backgroundColor: "#f44336",
-                            cursor: "not-allowed",
-                          }}
-                        >
-                          This place have already booked
-                        </button>
-                      </div>
+                      <button
+                        className="btn flex"
+                        style={{
+                          backgroundColor: "#f44336",
+                          cursor: "not-allowed",
+                        }}
+                      >
+                        This place have already booked
+                      </button>
                     ) : (
-                      <div className="fees flex">
-                        <button
-                          className="btn flex"
-                          onClick={() => {
-                            navigate(`/timeshare-detail/${timeshareId}`);
-                          }}
-                        >
-                          Details
-                        </button>
-                      </div>
+                      <button
+                        className="btn flex"
+                        onClick={() => {
+                          navigate(`/timeshare-detail/${timeshareId}`);
+                        }}
+                      >
+                        Details
+                      </button>
                     )}
                   </div>
                 </div>
@@ -105,4 +140,5 @@ const Main = ({ filteredData, currentPage, pageSize, userInformation }) => {
     </section>
   );
 };
+
 export default Main;

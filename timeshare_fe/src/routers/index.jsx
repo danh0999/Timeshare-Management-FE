@@ -20,6 +20,7 @@ const routers = [
   { path: "/register", components: Register },
   { path: "/faqs", components: FAQsPage },
   { path: "/history", components: HistoryPage },
+  { path: "/payment-history", components: HistoryPage },
   { path: "/list-timeshare", components: ListTimeSharePage },
   { path: "/timeshare-detail/:id", components: TimeShareDetailPage },
   { path: "/view-profile", components: ViewProfile },

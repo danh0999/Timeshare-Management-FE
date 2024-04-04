@@ -244,7 +244,7 @@ dl {
   color: #7f8c8d;
 }
 
-.btn-request {
+.btn-request.decline {
   background-color: #e74c3c;
   color: white;
   border: none;
@@ -257,8 +257,25 @@ dl {
   margin-bottom: 3%;
 }
 
-.btn-request:hover {
+.btn-request.decline:hover {
   background-color: #c0392b;
+}
+
+.btn-request.accept {
+  background-color: #0091b3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  margin-bottom: 3%;
+}
+
+.btn-request.accept:hover {
+  background-color: #067d99;
 }
 
 .poster-info {
@@ -302,16 +319,15 @@ dl {
 }
 
 .terms-and-conditions {
-  margin-top: 20px;
   text-align: center; /* Căn giữa nội dung */
+  margin-bottom: 20px;
 }
 
 /* Thêm phần padding để tạo khoảng cách với nút */
 .terms-and-conditions label {
-  padding-top: 10px;
 }
 
-.btn-request {
+.btn-request.decline {
   margin-bottom: 20px;
 }
 

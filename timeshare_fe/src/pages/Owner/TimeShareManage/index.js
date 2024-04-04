@@ -61,7 +61,7 @@ function TimeShareManagePage() {
           };
         });
         console.log(mergedObjects);
-        setData(mergedObjects);
+        setData(mergedObjects?.reverse());
       } else {
         console.log(1);
         console.log("Can't get time share");
