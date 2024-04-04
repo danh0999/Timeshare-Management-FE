@@ -90,7 +90,7 @@ function HomePage() {
             });
           }
         }
-        setData(mergedObjects);
+        setData(mergedObjects?.reverse());
       } else {
         console.log("Can't get time share");
       }

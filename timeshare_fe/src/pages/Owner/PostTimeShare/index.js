@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../../provide";
-import "./PostTimeshare.css";
+
 function PostTimeSharePage() {
   const navigation = useNavigate();
 
@@ -15,7 +15,8 @@ function PostTimeSharePage() {
     address: "",
     price: "",
     detail: "",
-    publicDate: "",
+    dateForm: "",
+    dateTo: "",
     image:
       "https://vietnamstaytravel.com/wp-content/uploads/2021/08/202108101050-image1.jpg",
     timeshareStatusId: 0,
@@ -51,12 +52,12 @@ function PostTimeSharePage() {
           createTimeshare.status === 200 &&
           createTimeshare.data.isSucceed &&
           createTimeshare.data.message ===
-            "Post Timeshare successfully. Awaiting confirmation."
+            "Create Timeshare successfully. Awaiting confirmation."
         ) {
           alert(createTimeshare.data.message);
           navigation("/");
         } else {
-          console.log("Can't Post Timeshare");
+          console.log("Can't create Timeshare");
         }
       }
     } catch (err) {
@@ -80,6 +81,16 @@ function PostTimeSharePage() {
     if (!data.address) {
       formIsValid = false;
       errors["address"] = "Please enter address";
+    }
+
+    if (!data.dateForm) {
+      formIsValid = false;
+      errors["dateForm"] = "Please enter dateForm";
+    }
+
+    if (!data.dateTo) {
+      formIsValid = false;
+      errors["dateTo"] = "Please enter dateTo";
     }
 
     if (!data.timeshareName) {
@@ -122,11 +133,11 @@ function PostTimeSharePage() {
     <>
       <div className={"registersform"}>
         <div className="flexsForm">
-          <h1>Post TimeShare</h1>
+          <h1>Create Time Share</h1>
           <div className="dividerSocial"></div>
           <form>
             <div className="textField">
-              <label>TimeShare Name</label>
+              <label>Time Share Name</label>
               <input
                 onChange={(e) => {
                   setData({ ...data, timeshareName: e.target.value });
@@ -175,7 +186,7 @@ function PostTimeSharePage() {
               />
               <span className="error">{errors["price"]}</span>
             </div>
-            <div className="textField">
+            {/* <div className="textField">
               <label>Public Date</label>
               <input
                 type="date"
@@ -184,6 +195,28 @@ function PostTimeSharePage() {
                 }}
               />
               <span className="error">{errors["price"]}</span>
+            </div> */}
+            <div className="textField">
+              <label>Date Form</label>
+              <input
+                type="date"
+                min={new Date().toISOString().split("T")[0]}
+                onChange={(e) => {
+                  setData({ ...data, dateForm: e.target.value });
+                }}
+              />
+              <span className="error">{errors["dateForm"]}</span>
+            </div>
+            <div className="textField">
+              <label>Date To</label>
+              <input
+                type="date"
+                min={new Date().toISOString().split("T")[0] && data?.dateForm}
+                onChange={(e) => {
+                  setData({ ...data, dateTo: e.target.value });
+                }}
+              />
+              <span className="error">{errors["dateTo"]}</span>
             </div>
             <div className="textField">
               <label>Detail</label>
@@ -201,7 +234,7 @@ function PostTimeSharePage() {
               />
               <span className="error">{errors["detail"]}</span>
             </div>
-            <button onClick={(e) => handleCreateTimeShare(e)}>POST</button>
+            <button onClick={(e) => handleCreateTimeShare(e)}>Create</button>
           </form>
         </div>
         <span className="divider"></span>

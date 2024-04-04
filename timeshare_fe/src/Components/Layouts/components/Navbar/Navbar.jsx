@@ -16,13 +16,14 @@ const navbarItems = {
   user: [
     { pathname: "/", title: "Home" },
     { pathname: "/history", title: "Booking History" },
+    { pathname: "/payment-history", title: "Payment History" },
     { pathname: "/faqs", title: "How it works" },
     { pathname: "/list-timeshare", title: "BOOK NOW" },
   ],
   owner: [
     { pathname: "/", title: "Home" },
     { pathname: "/post-timeshare", title: "Post Timeshare" },
-    { pathname: "/timeshare-management", title: "Manage Timeshare" },
+    { pathname: "/timeshare-management", title: "Manage Booking" },
     { pathname: "/faqs", title: "How it works" },
   ],
   staff: [
@@ -46,10 +47,10 @@ const Navbar = () => {
     loginContext;
 
   const handleShowProfile = () => {
-    navigate("/view-profile");
+    // navigate("/view-profile");
     setIsLogin(false);
     setUserInformation({});
-    // navigate("/");
+    navigate("/");
   };
   const showNav = () => {
     setActive("navBar activeNavbar");
