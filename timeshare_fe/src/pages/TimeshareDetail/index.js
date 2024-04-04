@@ -749,14 +749,14 @@ function TimeShareDetailPage() {
               disabled={isLogin && !termsAccepted}
             >
               {!isLogin
-                ? "NEED BECOME A MEMBER"
-                : checkBooked
-                ? "YOU PAYMENT THIS TIME SHARE"
-                : bookingUserInformation
-                ? "WAIT FOR APPROVE"
-                : timeshareStatusId === 4
-                ? "ACCEPT PAYMENT"
-                : "BOOKING"}
+               ? "NEED BECOME A MEMBER"
+               : checkBooked
+               ? "YOU NEED TO PAYMENT THIS TIME SHARE"
+               : bookingUserInformation
+               ? "WAIT FOR APPROVING"
+               : timeshareStatusId === 4
+               ? "ACCEPT PAYMENT"
+               : "BOOKING"}
             </button>
 
             {bookingUserInformation && (
