@@ -36,9 +36,7 @@ function AgreementPage() {
           interference, following the terms of this Agreement. In the event that
           the Unit is uninhabitable or inaccessible as per section 5 on the
           start date, Renter must notify timeshare immediately using the dispute
-          process outlined in section 6. Any dispute regarding the Unit or
-          potential evacuation delays payment to the Owner until resolved by
-          timeshare.
+          process outlined in section 6.The Renter agrees to occupy the Unit without disturbance throughout the rental period, adhering to the conditions set forth in this Agreement. If, on the start date, the Unit is deemed uninhabitable or inaccessible as outlined in section 5, the Renter must promptly inform the timeshare by following the dispute process detailed in section 6. Any unresolved disputes about the Unit, including possible evacuation issues, will postpone payment to the Owner until the matter is settled by the timeshare.
         </p>
 
         <h3 className="subsection-title">Rental Payment Terms</h3>
