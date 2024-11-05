@@ -18,13 +18,13 @@ function AgreementPage() {
       <div className="agreement-section">
         <h2 className="section-title">Terms and Conditions</h2>
         <p className="paragraph">
-          This Rental Agreement ("Agreement") is a legally binding contract
-          between the Owner and the Renter for the rental of the described unit
-          ("Unit") for the specified term ("Rental Period"). The Owner has
-          partnered with timeshare, Inc. ("timeshare") to facilitate this
-          transaction. While timeshare assists with the transaction and verifies
-          the Unit information, the Owner remains responsible for accuracy and
-          coordination with the resort.
+          The renting of the stated unit ("Unit") for the designated period
+          ("Rental Period") is covered by this legally enforceable rental
+          agreement ("Agreement") between the renter and the owner. To make this
+          transaction possible, the Owner has teamed up with timeshare, Inc.
+          ("timeshare"). The owner is still in charge of accuracy and
+          coordination with the resort, even though the timeshare helps with the
+          transaction and confirms the unit details.
         </p>
         <p className="paragraph">
           This Agreement takes effect after the Review Period described in
@@ -36,7 +36,14 @@ function AgreementPage() {
           interference, following the terms of this Agreement. In the event that
           the Unit is uninhabitable or inaccessible as per section 5 on the
           start date, Renter must notify timeshare immediately using the dispute
-          process outlined in section 6.The Renter agrees to occupy the Unit without disturbance throughout the rental period, adhering to the conditions set forth in this Agreement. If, on the start date, the Unit is deemed uninhabitable or inaccessible as outlined in section 5, the Renter must promptly inform the timeshare by following the dispute process detailed in section 6. Any unresolved disputes about the Unit, including possible evacuation issues, will postpone payment to the Owner until the matter is settled by the timeshare.
+          process outlined in section 6.The Renter agrees to occupy the Unit
+          without disturbance throughout the rental period, adhering to the
+          conditions set forth in this Agreement. If, on the start date, the
+          Unit is deemed uninhabitable or inaccessible as outlined in section 5,
+          the Renter must promptly inform the timeshare by following the dispute
+          process detailed in section 6. Any unresolved disputes about the Unit,
+          including possible evacuation issues, will postpone payment to the
+          Owner until the matter is settled by the timeshare.
         </p>
 
         <h3 className="subsection-title">Rental Payment Terms</h3>

@@ -16,26 +16,18 @@ function FAQsPage() {
         <div id="topfaq" className="main-well-solid mb-6">
           <h2 className="display small mb-4">Our Most Asked FAQ</h2>
           <dl>
-            <dt id="posting">
-
-            </dt>
-            <dd>
-
-            </dd>
-            <dt id="pricing">
-
-            </dt>
-            <dd>
-
-
-            </dd>
+            <dt id="posting"></dt>
+            <dd></dd>
+            <dt id="pricing"></dt>
+            <dd></dd>
             <dt id="search">
               <h4>How do I find a timeshare for rent or sale?</h4>
             </dt>
             <dd>
               <p>
-                The user views the homepage and details of the timeshare will be displayed when the user clicks on the details. Any timeshare to book is a timeshare that has already been booked.{" "}
-
+                The user sees the homepage, and upon clicking on the details,
+                the timeshare's details are shown. Any timeshare that may be
+                reserved is one that has already been reserved.{" "}
               </p>{" "}
             </dd>
             <dt id="contact-owner">
@@ -43,25 +35,21 @@ function FAQsPage() {
             </dt>
             <dd>
               <p>
-                When a user rents a timeshare, the owner will contact the user and exchange personal information
+                When a user rents a timeshare, the owner will contact the user
+                and exchange personal information
               </p>
-
             </dd>
             <dt id="agreement">
               <h4>Do you have a rental agreement?</h4>
             </dt>
             <dd>
               <p>
-                Yes - Click I have read the Rental Agreement, and agree to all terms.{" "}
-
+                Yes - Click I have read the Rental Agreement, and agree to all
+                terms.{" "}
               </p>{" "}
             </dd>
 
-
-
-            <dd>
-
-            </dd>
+            <dd></dd>
           </dl>
         </div>
 
@@ -82,70 +70,37 @@ function FAQsPage() {
               </p>{" "}
             </dd>
 
-
             <dt id="rental-transactions">
               <h4>How do I complete a rental transaction?</h4>
             </dt>
             <dd>
               <p>
-                After the Owner accepts the request, you need to see the contract and agree, then click the accept payment button to proceed with the payment.{" "}
-
-
+                After the Owner accepts the request, you need to see the
+                contract and agree, then click the accept payment button to
+                proceed with the payment.{" "}
               </p>{" "}
             </dd>
 
-
-
             <dd>
-              <p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-              </p>{" "}
+              <p></p>{" "}
             </dd>
-            <dt id="posting-number">
-
-            </dt>
-            <dd>
-
-            </dd>
+            <dt id="posting-number"></dt>
+            <dd></dd>
             <dt id="delay">
               <h4> </h4>
             </dt>
             <dd>
               <p>
-
                 <a
                   href="/contact-us"
                   title="Contact RedWeek.com customer service"
-                >
-
-                </a>{" "}
-
+                ></a>{" "}
               </p>{" "}
             </dd>
-            <dt id="nightly">
-
-            </dt>
-            <dd>
-
-            </dd>
-            <dt id="currency">
-
-            </dt>
-            <dd>
-
-            </dd>
+            <dt id="nightly"></dt>
+            <dd></dd>
+            <dt id="currency"></dt>
+            <dd></dd>
           </dl>
         </div>
 
@@ -157,9 +112,9 @@ function FAQsPage() {
             </dt>
             <dd>
               <p>
-                You just need to visit the timeshare details page, then view details about the timeshare and send a request to book for the owner to review.{" "}
-
-
+                You just need to visit the timeshare details page, then view
+                details about the timeshare and send a request to book for the
+                owner to review.{" "}
               </p>
             </dd>
             <dt id="sell">
@@ -167,58 +122,38 @@ function FAQsPage() {
             </dt>
             <dd>
               <p>
-                Users need to contact the admin to have the right to post their posts.
-
+                Users need to contact the admin to have the right to post their
+                posts.
               </p>{" "}
             </dd>
-            <dt id="rent-sell-cost">
-
-            </dt>
-            <dd>
-
-
-
-
-            </dd>
+            <dt id="rent-sell-cost"></dt>
+            <dd></dd>
             <dt id="edit">
               <h4>How do I edit my posting?</h4>
             </dt>
             <dd>
               <p>
-                Just go to managetimeshare and select update timeshare to edit your timeshare.
+                Just go to managetimeshare and select update timeshare to edit
+                your timeshare.
               </p>
-
             </dd>
-            <dt id="floating">
-
-            </dt>
+            <dt id="floating"></dt>
             <dd>
-              <p>
+              <p></p>
 
-              </p>
-
-
-              <p className="text-center">
-
-
-
-              </p>
+              <p className="text-center"></p>
             </dd>
             <dt id="posting-contact">
               <h4>How will I know when I have a renter or buyer?</h4>
             </dt>
             <dd>
               <p>
-                The user sends a request and the owner will check in see of order.
+                The user sends a request and the owner will check in see of
+                order.
               </p>
-
             </dd>
-            <dt id="points">
-
-            </dt>
-            <dd>
-
-            </dd>
+            <dt id="points"></dt>
+            <dd></dd>
             <dt id="missing">
               <h4>Why isn't my posting showing up?</h4>
             </dt>
@@ -231,47 +166,22 @@ function FAQsPage() {
                 {" "}
                 <li>
                   {" "}
-                  Your account has been banned so you can't post.
-
-
-
-
-                  .{" "}
+                  Your account has been banned so you can't post. .{" "}
                 </li>{" "}
                 <li>
                   {" "}
-                  The system is under maintenance to update new features.
-
-                  .{" "}
+                  The system is under maintenance to update new features. .{" "}
                 </li>{" "}
                 <li>
                   {" "}
-                  admin or staff do not approve your timeshare.
-
-                  .{" "}
-                </li>{" "}
-
-                {" "}
-
-
-                .{" "}
-
-
-                {" "}
-
-
+                  admin or staff do not approve your timeshare. .{" "}
+                </li> .{" "}
               </ol>{" "}
             </dd>
 
-
-            <dd>
-            </dd>
-            <dt id="online">
-
-            </dt>
-            <dd>
-
-            </dd>
+            <dd></dd>
+            <dt id="online"></dt>
+            <dd></dd>
           </dl>
         </div>
 
@@ -282,27 +192,16 @@ function FAQsPage() {
               <h4>How do I change my information?</h4>
             </dt>
             <dd>
-              <p>
-                Click view-profile to change personal information.{" "}
-              </p>
+              <p>Click view-profile to change personal information. </p>
             </dd>
-            <dt id="renew">
-
-            </dt>
+            <dt id="renew"></dt>
             <dd>
               <p>
-
                 <a
                   href="/account/postings"
                   title="view your timeshare postings"
-                >
-
-                </a>{" "}
-
-                <a href="/account" title="View your Account page">
-
-                </a>
-                .
+                ></a>{" "}
+                <a href="/account" title="View your Account page"></a>.
               </p>{" "}
             </dd>
             <dt id="payment">
@@ -310,10 +209,8 @@ function FAQsPage() {
             </dt>
             <dd>
               <p>
-                Of course, my website supports payment by bank transfer and international card.
-
-
-
+                Of course, my website supports payment by bank transfer and
+                international card.
               </p>{" "}
             </dd>
             <dt id="refund">
@@ -321,8 +218,8 @@ function FAQsPage() {
             </dt>
             <dd>
               <p>
-                Generally, purchases made on TimeshareManagement are non-refundable, with a
-                few exceptions.{" "}
+                Generally, purchases made on TimeshareManagement are
+                non-refundable, with a few exceptions.{" "}
                 <a href="/tos#refunds">View our full refund policy</a> in the
                 terms of service.
               </p>{" "}
@@ -333,7 +230,10 @@ function FAQsPage() {
         <h2>Contact Customer Service</h2>
         <p>
           If your question wasn't answered here, please{" "}
-          <a href="https://www.facebook.com/profile.php?id=100011848508730" title="Contact timeshare customer service">
+          <a
+            href="https://www.facebook.com/profile.php?id=100011848508730"
+            title="Contact timeshare customer service"
+          >
             contact us
           </a>
           .
