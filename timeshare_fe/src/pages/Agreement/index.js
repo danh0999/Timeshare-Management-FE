@@ -41,12 +41,12 @@ function AgreementPage() {
 
         <h3 className="subsection-title">Rental Payment Terms</h3>
         <p className="paragraph">
-          3.1. Upon receiving Renter's full Rental Payment, timeshare begins a
-          review ("Review Period"). timeshare may request additional
-          documentation or information to confirm the rental. Upon completing
-          the Review Period, timeshare issues a Confirmation email to both Owner
-          and Renter, activating this Agreement. If no Confirmation is issued,
-          timeshare refunds the Rent Payment, releasing all parties from
+          3.1. Upon receiving the full rental payment from the Renter, timeshare
+          initiates a review period ("Review Period"). During this time, timeshare
+          may request additional documentation or information to verify the rental.
+          Once the Review Period is complete, timeshare sends a confirmation email
+          to both the Owner and the Renter, activating this Agreement. If no confirmation
+          is issued, timeshare refunds the rental payment, releasing all parties from any
           obligations.
         </p>
 
